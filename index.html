@@ -354,9 +354,10 @@
 
   <!-- audio -->
   <div id="audio-container">
-    <audio id="song">
-      <source src="/audio/[MV] Rapsodi - JKT48.mp3" type="audio/mp3">
+    <audio id="song" autoplay loop>
+      <source src="audio/[MV] Rapsodi - JKT48.mp3" type="audio/mp3">
     </audio>
+
     <div class="audio-icon-wrapper" style="display: none;">
       <i class="bi bi-disc"></i>
     </div>
@@ -422,7 +423,7 @@
     }
 
     function playAudio() {
-      song.volume = 1;
+      song.volume = 0.1;
       audioIconWrapper.style.display = 'flex';
       song.play();
       isPlaying = true;
@@ -441,6 +442,7 @@
 
       isPlaying = !isPlaying;
     }
+
 
     // if (!localStorage.getItem('opened')) {
     //   disableScroll();
